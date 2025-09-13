@@ -62,6 +62,7 @@ const Upload = () => {
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
         setStatusText("Analysis complete, redirecting...");
         console.log(data);
+        navigate(`/resume/${uuid}`);
     }
 
     const handleSubmit =(e: FormEvent<HTMLFormElement>)=>{
@@ -122,4 +123,5 @@ const Upload = () => {
     </main>
   );
 };
+// @ts-ignore
 export default Upload;
