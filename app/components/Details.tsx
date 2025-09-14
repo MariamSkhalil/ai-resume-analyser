@@ -14,22 +14,22 @@ const ScoreBadge = ({ score }: { score: number }) => {
                 "flex flex-row gap-1 items-center px-2 py-0.5 rounded-[96px]",
                 score > 70
                     ? "bg-badge-green"
-                    : score > 39
+                    : score > 49
                         ? "bg-badge-yellow"
                         : "bg-badge-red"
             )}
         >
             <img
-                src={score > 69 ? "/icons/check.svg" : "/icons/warning.svg"}
+                src={score > 70 ? "/icons/check.svg" : "/icons/warning.svg"}
                 alt="score"
                 className="size-4"
             />
             <p
                 className={cn(
                     "text-sm font-medium",
-                    score > 69
+                    score > 70
                         ? "text-badge-green-text"
-                        : score > 39
+                        : score > 49
                             ? "text-badge-yellow-text"
                             : "text-badge-red-text"
                 )}
@@ -50,7 +50,7 @@ const CategoryHeader = ({title, categoryScore}:{title: string, categoryScore: nu
 }
 
 const CategoryContent = ({tips}: {tips: {type: "good" | "improve" , tip: string, explanation: string}[]})=>{
-    return(<div className={"flex flex-col items-center gap-4 w-fulll"}>
+    return(<div className={"flex flex-col items-center gap-4 w-full"}>
 
         <div className={"bg-gray-50  w-full rounded-lg px-5 py-4 grid grid-cols-2 gap-4"}>
             {tips.map((tip, i) => (
