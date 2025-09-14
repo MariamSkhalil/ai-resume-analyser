@@ -31,7 +31,7 @@ const Resume = () => {
             if(!resume) return;
 
             const data= JSON.parse(resume);
-            const resumeBlob = await fs.read(data.resumePath);
+            const resumeBlob = await fs.read(data.filePath);
             if(!resumeBlob) return;
             const pdfBlob= new Blob([resumeBlob],{type: "application/pdf"});
             const resumeURL = URL.createObjectURL(pdfBlob);
