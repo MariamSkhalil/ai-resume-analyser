@@ -44,6 +44,7 @@ const Resume = () => {
 
             setFeedback(data.feedback);
             console.log({imageURL,resumeURL,feedback});
+
         }
 
         loadResume();
