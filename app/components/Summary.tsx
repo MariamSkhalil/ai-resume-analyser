@@ -7,15 +7,15 @@ const Category = ({title,score}: {title:string, score:number})=>{
     const bgColour = score > 70 ? "bg-badge-green" : score > 45 ? "bg-badge-yellow" : "bg-badge-red";
 
     return(
-        <div className={"resume-summary p-4 sm:p-6"}>
+        <div className={"resume-summary"}>
             <div className={"category"}>
-                <div className={"flex flex-row gap-2 items-center justify-center sm:justify-start"}>
-                    <p className={"text-lg sm:text-2xl font-semibold"}>{title}</p>
-                    <div className={`${bgColour} ${textColour} px-3 py-1 rounded-full text-center`}>
-                        <p className={"text-xs sm:text-sm font-medium"}>{ratingText}</p>
+                <div className={"flex flex-row gap-2 items-center justify-center"}>
+                    <p className={"text-2xl"}>{title}</p>
+                    <div className={`${bgColour} ${textColour} px-3 py-1 rounded-full`}>
+                        <p className={"text-sm font-medium"}>{ratingText}</p>
                     </div>
                 </div>
-                <p className={"text-lg sm:text-2xl"}>
+                <p className={"text-2xl"}>
                     <span className={textColour}>{score}</span>
                     /100
                 </p>
