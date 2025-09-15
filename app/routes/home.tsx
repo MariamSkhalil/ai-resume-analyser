@@ -42,15 +42,15 @@ export default function Home() {
 
 
     return (
-    <main className={"bg-[url('/images/bg-main.svg')] bg-cover"}>
+    <main className={"bg-[url('/images/bg-main.svg')] bg-cover min-h-screen"}>
       <Navbar />
-      <section className={"main-section"}>
-        <div className={"page-heading py-16"}>
-          <h1>Track Your Applications & Resume Ratings</h1>
+      <section className={"main-section px-4 sm:px-8"}>
+        <div className={"page-heading py-12 text-center sm:py-16"}>
+          <h1 className="text-2xl sm:text-4xl font-bold leading-tight">Track Your Applications & Resume Ratings</h1>
             {!loadingResumes && resumes.length === 0 ?(
-                <h2>No resumes found. Upload your first resume to get feedback</h2>
+                <h2 className="text-base sm:text-lg text-gray-600">No resumes found. Upload your first resume to get feedback</h2>
             ):(
-                <h2>Review your submissions and check AI-powered feedback.</h2>
+                <h2 className="text-base sm:text-lg text-gray-600">Review your submissions and check AI-powered feedback.</h2>
             )}
         </div>
 
@@ -70,7 +70,7 @@ export default function Home() {
 
           {!loadingResumes && resumes.length === 0 && (
               <div className={"flex-col items-center justify-center mt-10 gap-4"}>
-                  <Link to={"/upload"} className={"primary-button w-fit text-xl font-semibold"}>
+                  <Link to={"/upload"} className={"primary-button w-full sm:w-auto text-lg sm:text-xl font-semibold text-center"}>
                     Upload Resume
                   </Link>
               </div>
