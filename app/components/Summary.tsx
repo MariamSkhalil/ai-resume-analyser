@@ -7,15 +7,15 @@ const Category = ({title,score}: {title:string, score:number})=>{
     const bgColour = score > 70 ? "bg-badge-green" : score > 45 ? "bg-badge-yellow" : "bg-badge-red";
 
     return(
-        <div className={"resume-summary"}>
+        <div className={"resume-summary p-4 sm:p-6"}>
             <div className={"category"}>
-                <div className={"flex flex-row gap-2 items-center justify-center"}>
-                    <p className={"text-2xl"}>{title}</p>
-                    <div className={`${bgColour} ${textColour} px-3 py-1 rounded-full`}>
-                        <p className={"text-sm font-medium"}>{ratingText}</p>
+                <div className={"flex flex-row gap-2 items-center justify-center sm:justify-start"}>
+                    <p className={"text-lg sm:text-2xl font-semibold"}>{title}</p>
+                    <div className={`${bgColour} ${textColour} px-3 py-1 rounded-full text-center`}>
+                        <p className={"text-xs sm:text-sm font-medium"}>{ratingText}</p>
                     </div>
                 </div>
-                <p className={"text-2xl"}>
+                <p className={"text-lg sm:text-2xl"}>
                     <span className={textColour}>{score}</span>
                     /100
                 </p>
@@ -27,7 +27,7 @@ const Category = ({title,score}: {title:string, score:number})=>{
 const Summary = ({feedback}: {feedback: Feedback}) => {
     return (
         <div className={"bg-white rounded-2xl shadow-md w-full"}>
-            <div className={"flex flex-row items-center p-6 sm:p-4 gap-8"}>
+            <div className={"flex flex-row items-center p-4 gap-8"}>
                 <ScoreGauge score={feedback.overallScore} />
                 <div className={"flex flex-col gap-2"}>
                     <h2 className={"text-2xl font-bold"}>Your Resume Score</h2>
