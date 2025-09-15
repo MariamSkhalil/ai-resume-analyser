@@ -87,7 +87,7 @@ const Upload = () => {
       <Navbar />
       <section className={"main-section"}>
           <div className={"page-heading py-12 sm:py-16"}>
-              <h1 className={"text-2xl sm:text-4xl font-bold leading-tight"}>Smart feedback for your dream job</h1>
+              <h1 className={"text-lg sm:text-4xl font-bold leading-tight"}>Smart feedback for your dream job</h1>
               {isProcessing ? (
                   <>
                   <h2>{statusText}</h2>
