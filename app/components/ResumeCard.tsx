@@ -48,7 +48,7 @@ const ResumeCard = ({ resume }: { resume: Resume }) => {
                     <img
                         src={resumeURL}
                         alt="resume"
-                        className="w-full h-[220px] sm:h-[320px] object-cover object-top"
+                        className="w-full h-[180px] sm:h-[260px] lg:h-[320px] object-cover object-top"
                     />
                 </div>
             )}
