@@ -52,13 +52,13 @@ const CategoryHeader = ({title, categoryScore}:{title: string, categoryScore: nu
 const CategoryContent = ({tips}: {tips: {type: "good" | "improve" , tip: string, explanation: string}[]})=>{
     return(<div className={"flex flex-col items-center gap-4 w-full"}>
 
-        <div className={"bg-gray-50  w-full rounded-lg px-5 py-4 grid grid-cols-2 gap-4"}>
+        <div className={"bg-gray-50  w-full rounded-lg px-4 sm:px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4"}>
             {tips.map((tip, i) => (
                 <div className={"flex flex-row gap-2 items-center"} key={i}>
                     <img src={tip.type === "good" ? "/icons/check.svg" : "/icons/warning.svg"}
                         alt={"score"}
-                         className={"w-5 h-5"}/>
-                    <p className={"text-xl text-gray-500"}>{tip.tip}</p>
+                         className={"w-5 h-5 mt-0.5"}/>
+                    <p className={"text-sm sm:text-base lg:text-lg text-gray-600 leading-snug"}>{tip.tip}</p>
                 </div>
             ))}
         </div>
