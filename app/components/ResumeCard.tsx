@@ -43,7 +43,6 @@ const ResumeCard = ({ resume }: { resume: Resume }) => {
                 </div>
             </div>
 
-            
             {resumeURL && (
                 <div className="gradient-border animate-in fade-in duration-1000 rounded-xl overflow-hidden">
                     <img
