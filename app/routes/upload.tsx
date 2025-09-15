@@ -83,18 +83,18 @@ const Upload = () => {
     }
 
     return (
-    <main className={"bg-[url('/images/bg-main.svg')] bg-cover"}>
+    <main className={"bg-[url('/images/bg-main.svg')] bg-cover min-h-screen"}>
       <Navbar />
       <section className={"main-section"}>
-          <div className={"page-heading py-16"}>
-              <h1>Smart feedback for your dream job</h1>
+          <div className={"page-heading py-12 sm:py-16"}>
+              <h1 className={"text-2xl sm:text-4xl font-bold leading-tight"}>Smart feedback for your dream job</h1>
               {isProcessing ? (
                   <>
                   <h2>{statusText}</h2>
                       <img src={"/images/resume-scan.gif"} className={"w-full"}/>
                   </>
               ):(
-                  <h2>Drop your resume for an ATS score and improvement tips</h2>
+                  <h2 className={"mt-4 text-base sm:text-lg text-gray-600"}>Drop your resume for an ATS score and improvement tips</h2>
               )}
               {!isProcessing && (
                   <form id={"upload-form"} className={"flex flex-col gap-4 mt-8"} onSubmit={handleSubmit}>

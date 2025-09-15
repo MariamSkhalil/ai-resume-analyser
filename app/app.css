@@ -75,10 +75,12 @@ form {
         @apply primary-gradient rounded-full py-4 px-8 cursor-pointer w-[600px] max-md:w-full text-3xl font-semibold text-white;
     }
     .main-section {
-        @apply flex flex-col items-center gap-8 pt-12 mx-15 pb-5;
+        @apply flex flex-col items-center pt-12 mx-15 pb-5;
+        @apply gap-6 sm:gap-8;
     }
     .page-heading {
-        @apply flex flex-col items-center gap-8 max-w-4xl text-center;
+        @apply flex flex-col items-center max-w-4xl text-center;
+        @apply gap-6 sm:gap-8;
     }
     .resumes-section {
         @apply flex flex-wrap max-lg:flex-col gap-6 items-start  w-full max-w-[1850px] justify-evenly;
